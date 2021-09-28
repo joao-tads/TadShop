@@ -1,18 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { AppLoading } from 'expo';
 import Routes from './src/router';
-import { useFonts, Anton_400Regular } from '@expo-google-fonts/anton';
+import { useFonts } from 'expo-font';
 
 export default function App() {
 
   let [fontsLoaded] = useFonts({
-    Anton_400Regular,
+    'Anton': require('./assets/fonts/Anton-Regular.ttf'),
   });
-
-  if (!fontsLoaded) {
-    return <AppLoading />
-  }
 
   return (
     <>
