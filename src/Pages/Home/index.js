@@ -13,9 +13,9 @@ export default function Home() {
 
                 <View style={styles.textContainer}>
                     <Text style={styles.text}>TÊNIS</Text>
-                    <Text style={styles.text}>-</Text>
-                    <Text style={styles.text}>MASCULINO</Text>
-                    <TouchableOpacity>
+                    <Text style={styles.text, { color: '#CECECF' }} > -</Text>
+                    <Text style={styles.text, { color: '#CECECF' }}>MASCULINO</Text>
+                    <TouchableOpacity style={{ position: 'absolute', right: 0, alignSelf: 'center' }}>
                         <MaterialIcons
                             name="filter-list"
                             size={24}
@@ -24,7 +24,7 @@ export default function Home() {
                     </TouchableOpacity>
                 </View>
             </View>
-        </View>
+        </View >
     );
 }
 
@@ -41,9 +41,13 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     textContainer: {
-
+        flexDirection: 'row',
+        marginVertical: '5%',
+        marginHorizontal: '5%',
     },
     text: {
-
+        fontFamily: 'Anton',
+        fontSize: 26,
+        marginHorizontal: '1%',
     }
 });
