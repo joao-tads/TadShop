@@ -5,9 +5,13 @@ import { useFonts } from 'expo-font';
 
 export default function App() {
 
-  let [fontsLoaded] = useFonts({
-    'Anton': require('./assets/fonts/Anton-Regular.ttf'),
+  const [loaded] = useFonts({
+    Anton: require('./assets/fonts/Anton-Regular.ttf'),
   });
+
+  if (!loaded) {
+    return null;
+  }
 
   return (
     <>
