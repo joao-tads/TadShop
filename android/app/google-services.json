@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "824060631493",
+    "project_id": "tadshope",
+    "storage_bucket": "tadshope.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824060631493:android:4764fce5f8b241923553ac",
+        "android_client_info": {
+          "package_name": "com.TadShop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824060631493-fk14f9qdtmjglfspm5t9ioujjksq47pr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_GZs4Z6mlI66e8NtodKmv5kTJ5Cx1WzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824060631493-fk14f9qdtmjglfspm5t9ioujjksq47pr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
