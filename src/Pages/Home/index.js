@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, TextInput } from 'react-native';
+import { FontAwesome, Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
 import Shoes from '../../components/Shoes';
@@ -11,21 +11,45 @@ export default function Home() {
 
     return (
         <View style={styles.container}>
-            <View style={styles.header}>
+            <View style={styles.ImageTop} >
                 <Image
-                    source={require('../../assets/img/banner.png')}
+                    source={require('../../assets/img/Title.png')}
                     style={styles.image}
                 />
-
-                <View style={styles.textContainer}>
-                    <Text style={styles.text}>TÊNIS</Text>
-                    <Text style={[styles.text, { color: '#CECECF' }]} > -</Text>
-                    <Text style={[styles.text, { color: '#CECECF' }]} >MASCULINO</Text>
-                    <TouchableOpacity style={{ position: 'absolute', right: 0, alignSelf: 'center' }}>
-                        <MaterialIcons
-                            name="filter-list"
+            </View>
+            <View style={styles.header}>
+                <View style={styles.textSerarch}>
+                    <TextInput name='pesquisa' style={[styles.serarch, { paddingLeft: 10 }]} placeholder='Pesquisar' />
+                    <TouchableOpacity style={{ position: 'relative', left: '42%' }}>
+                        <FontAwesome
+                            name="search"
+                            size={15}
+                            color="#D8d8d8"
+                        />
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.imageContainer}>
+                    <TouchableOpacity style={{ position: 'absolute', right: '0%', alignSelf: 'center' }}>
+                        <FontAwesome
+                            name="user"
                             size={24}
-                            color="#000"
+                            color="#0c185c"
+                        />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ position: 'absolute', right: '9%', alignSelf: 'center' }}>
+                        <Ionicons
+                            name="notifications"
+                            size={24}
+                            color="#0c185c"
+                        />
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ position: 'absolute', right: '20%', alignSelf: 'center' }}>
+                        <FontAwesome
+                            name="shopping-cart"
+                            size={24}
+                            color="#0c185c"
                         />
                     </TouchableOpacity>
                 </View>
@@ -71,12 +95,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
     },
     header: {
-        marginBottom: 8,
+        backgroundColor: '#fc752b',
+    },
+    ImageTop: {
+        width: '100%',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     image: {
-        width: '100%',
+        marginTop: '5%',
+        width: 300,
+        height: 100,
     },
-    textContainer: {
+    imageContainer: {
         flexDirection: 'row',
         marginVertical: '5%',
         marginHorizontal: '5%',
@@ -89,5 +120,25 @@ const styles = StyleSheet.create({
     line: {
         borderBottomColor: '#D8d8d8',
         borderBottomWidth: 2,
-    }
+    },
+    textSerarch: {
+        position: 'absolute',
+        top: 8,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#0c185c',
+        left: '15%',
+        borderRadius: 4,
+        width: 160,
+        height: 22,
+    },
+    serarch: {
+        position: 'absolute',
+        borderRadius: 3,
+        left: '1.2%',
+        width: 130,
+        height: 18,
+        backgroundColor: '#d9d9d9',
+        color: 'black',
+    },
 });

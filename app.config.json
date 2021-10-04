@@ -24,7 +24,8 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "googleServicesFile": "./Android/App/google-services.json"
+      "googleServicesFile": "./Android/App/google-services.json",
+      "package": "app.config.json"
     },
     "plugins": [
       "@react-native-firebase/app",
